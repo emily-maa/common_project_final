@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    width: 95%;
+    margin: auto;
+}
+body{
+    background-color:#FEFBEA;
+    color: black;
+}
+h1{
+    font-size: 5em;
+    font-family: Agbalumo,serif;
+    text-align: left;
+    margin-bottom: 20px;
+    text-align: center;
+}
+h2{
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkgreen;
+    text-align: center;
+    margin: 20px;
+}
+h3{
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkgreen;
+    text-align: center;
+    margin: 20px;
+}
+img{
+    border: solid darkgreen 5px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    border-top-right-radius: 30px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+p,span,li{
+    line-height: 2;
+}
+p{
+    text-align: center;
+}
+nav{
+    margin-top: 30px;
+}
+nav li{
+    margin-bottom: 20px;
+    list-style: none;
+    
+
+}
+nav a{
+    font-size: 1.5em;
+    border: solid 1px darkgreen;
+    display: block;
+        /* Make links behave like blocks */
+    width: 100px;
+        /* Set a fixed width for each box */
+    height: 40px;
+        /* Set a fixed height for each box */
+    text-align: center;
+        /* Center the text horizontally */
+    line-height: 40px;
+        /* Center the text vertically */
+    background-color: mintcream;
+    color: darkgreen;
+    text-decoration: none;
+    
+}
+nav a:focus,nav a:hover{
+    text-decoration: underline;
+    border: solid 3px darkgreen;
+}
+img{
+    transition: transform 0.3s ease-out;
+}
+img:hover{
+    width: 100%;
+    transform: scale(1.2);
+}
+.travel_background{
+    height: 50vh;
+    background-image: url(../images/travel_background.jpeg);
+    margin-bottom: 5vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.recipe_background {
+    height: 50vh;
+    background-image: url(../images/recipe-background.avif);
+    margin-bottom: 5vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.pets_background {
+    height: 50vh;
+    background-image: url(../images/pets_background2.jpeg);
+    margin-bottom: 5vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#skip{
+    position: absolute;
+    left: -500px;
+}
+#skip:focus{
+    left: 500px;
+}
+.current_page{
+    color: beige;
+    text-decoration: underline;
+    background-color: darkgreen;
+}
+span{
+    display: block;
+}
+
+
+.food_images,.pet_images{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    
+}
+.food_images img,.pet_images img,figure img,video{
+    border: double darkgreen 5px;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 30px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+/* figure{
+    animation-name: example;
+    animation-duration: 4s;
+} */
+.food_images img:nth-child(3){
+    grid-column: span 2;
+    width: 300px;
+    margin: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    img[src$=".gif"] {
+        display: none;
+    }
+    .food_images img,.pet_images img,figure img,video{
+        animation: none;
+    }
+    img {
+        transition: none;
+        }
+    img:hover {
+        width: none;
+        transform: none;
+    }
+}
+
+@keyframes example {
+    from {
+        background-color: #DAF7A6;
+    }
+
+    to {
+        background-color: forestgreen;
+    }
+}
+/* .print{
+    background: none;
+    border: none;
+    font-size: xx-large;
+    display: inline;
+}
+.print:hover{
+    font-size: xxx-large;
+} */
+.material-symbols-outlined {
+    background: none;
+    border: none;
+    font-size: 30px;
+}
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.material-symbols-outlined:hover {
+    font-size: xx-large;
+}
+.material-symbols-outlined span:hover {
+    font-weight: bold;
+}
+
+.dropdown {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.dropdown button {
+    background-color: #043f1aba;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.dropdown .content {
+    display: none;
+    width: 50%;
+    position: absolute;
+    background-color: hsl(49, 66%, 92%);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8)
+}
+
+.dropdown:hover .content {
+    display: block;
+}
+
+.dropdown:hover button {
+    background-color: hsl(131, 11%, 49%);
+}
+
+.dropdown a:hover {
+    background-color: hsl(53, 21%, 85%);
+    text-decoration: underline;
+}
+@media screen and (min-width: 680px) {
+    nav ul{
+        display: flex;
+    }
+    .ingredients{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        list-style-position: inside;
+    }
+    .ingredients li{
+        margin: 0;
+    }
+    .likes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 30px;
+        margin: auto;
+        width: 50%;
+    }
+    .likes h3{
+        grid-column-start: 1/-1;
+        border-right: 10px double green;
+        justify-self: end;
+
+        
+    }
+    .likes ul{
+        grid-column-start: 2/3;
+    }
+    .travel_images{
+        display: flex;
+        justify-content: space-between;
+    }
+    .travel_images img{
+        max-width: 40%;
+        height: auto;
+    }
+    .gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 50px;
+    }
+    /* .dropdown{
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+    .dropdown button{
+        background-color: #043f1aba;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+    }
+    .dropdown a{
+       display: block; 
+       color: black;
+       text-decoration: none;
+        padding: 10px 15px;
+    }
+    .dropdown .content{
+        display: none;
+        width: 50%;
+        position: absolute;
+        background-color: hsl(49, 66%, 92%);
+        min-width: 100px;
+        box-shadow: 2px 2px 5px hsla(0,0%,0%,0.8)
+    }
+    .dropdown:hover .content{
+        display: block;
+    }
+    .dropdown:hover button{
+        background-color: hsl(131, 11%, 49%);
+    }
+    .dropdown a:hover{
+        background-color: hsl(53, 21%, 85%);
+        text-decoration: underline;
+    } */
+    .read-more-container{
+        display: flex;
+        flex-direction: column;
+    }
+   .read-more-btn{
+    color: darkgreen;
+    text-align: center;
+   }
+   .read-more-btn:hover{
+    cursor: pointer;
+    text-decoration: underline;
+   }
+   .read-more-text{
+    display: none;
+   }
+    @media(prefers-color-scheme:dark){
+        body{
+            background-color: black;
+            color: beige;
+        }
+        #skip:focus {
+            left: 70px;
+            top: 200px;
+        }
+        .read-more-btn {
+            color: lightgreen;
+            text-align: center;
+        }
+        nav a{
+            background-color: #012015;
+            color: beige;
+            border: solid 1px beige;
+        }
+        .current_page{
+            background-color: beige;
+            color: #012015;
+        }
+        h2,h3,p a{
+            color: beige;
+        }
+        .dropdown a:hover {
+            background-color: hsl(110, 57%, 14%);
+            text-decoration: underline;
+        }
+        .dropdown .content{
+            background-color: #012015
+        }
+        .dropdown a{
+            color: beige;
+        }
+        .dropdown button{
+            border: 2px solid beige;
+        }
+        .dropdown:hover button {
+            background-color: hsl(129, 10%, 25%);
+        }
+        #skip{
+            color: beige;
+        }
+        
+    }
+
+}
+@media screen and (min-width: 900px){
+    #skip:focus {
+        left: 300px;
+        top: 20px;
+    }
+    .ingredients{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .food_images{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .food_images img:nth-child(3) {
+            grid-column: span 1;
+            width: 200px;
+    }
+    .desktop{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .desktop .spans{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .desktop img{
+        grid-column: 2/3;
+    }
+    .desktop p{
+        grid-column: span 2;
+    }
+    .pet_desktop{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 90%;
+    }
+    .gallery figure:nth-child(5){
+        grid-column:3/4
+    }
+   
+}
+
